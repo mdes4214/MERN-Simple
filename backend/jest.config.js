@@ -12,4 +12,9 @@ module.exports = {
         "json",
         "node",
     ],
+    testTimeout: 20000,
+    testPathIgnorePatterns: [
+        "/node_modules/",
+        "/out/"
+    ]
 }
