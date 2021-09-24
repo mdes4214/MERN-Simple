@@ -32,7 +32,7 @@ const startFastify: (port: number) => FastifyInstance<Server, IncomingMessage, S
     server.post('/cats', async (request: FastifyRequest, reply: FastifyReply) => {
         const postBody = request.body
         const cat = await Cat.create(postBody)
-        return reply.status(200).send({ cat })
+        return reply.status(201).send({ cat })
     })
 
     return server
