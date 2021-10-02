@@ -10,15 +10,7 @@ export const connect = async (): Promise<void> => {
     await mongod.start()
     const uri = mongod.getUri()
  
-    const mongooseOpts = {
-        useNewUrlParser: true,
-        autoReconnect: true,
-        reconnectTries: Number.MAX_VALUE,
-        reconnectInterval: 1000,
-        poolSize: 10
-    }
- 
-    await mongoose.connect(uri, mongooseOpts)
+    await mongoose.connect(uri)
 }
  
 /**
